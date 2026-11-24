@@ -1,0 +1,889 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- EDIT: Update page title and description with your own name and bio -->
+    <title>Deniz Kaya — Personal Archive, Projects &amp; Writings</title>
+    <meta name="description"
+        content="Personal portfolio, essays, and curriculum vitae of Deniz Kaya — exploring web architecture, editorial systems, and digital craft.">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..500;1,400..500&family=Host+Grotesk:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="icon" type="image/png" href="assets/mascot-fox.png">
+    <link rel="apple-touch-icon" href="assets/mascot-fox.png">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+
+    <!-- Floating Pill Navigation & Expandable Index Drawer -->
+    <header class="site-nav-wrap">
+        <div class="nav-pill">
+            <!-- EDIT: Replace wordmark with your name or studio monogram -->
+            <a class="nav-brand" href="#top">
+                <span class="status-pip" aria-hidden="true"></span>
+                <span class="nav-wordmark">DENIZ KAYA</span>
+            </a>
+
+            <nav class="nav-links" aria-label="Primary navigation">
+                <a class="ghost-link" href="#projects" data-nav-link>Projects</a>
+                <a class="ghost-link" href="#writings" data-nav-link>Writings</a>
+                <a class="ghost-link" href="#cv" data-nav-link>CV</a>
+                <a class="ghost-link" href="#contact" data-nav-link>Contact</a>
+            </nav>
+
+            <button type="button" id="menu-toggle" class="pill pill--primary nav-menu-btn" aria-expanded="false"
+                aria-controls="nav-drawer">
+                <span id="menu-toggle-label">Menu</span>
+                <span id="menu-toggle-icon" aria-hidden="true">+</span>
+            </button>
+        </div>
+
+        <div id="nav-drawer" class="nav-drawer" hidden>
+            <div class="nav-drawer-head">
+                <span class="nav-drawer-status">
+                    <span class="status-pip status-pip--lime" aria-hidden="true"></span>
+                    <span>AVAILABLE FOR SELECT WORK</span>
+                </span>
+                <span class="nav-drawer-clock">
+                    <!-- EDIT: Update city label if needed -->
+                    LOCAL TIME · <time id="drawer-clock">--:--:--</time>
+                </span>
+            </div>
+
+            <nav class="nav-drawer-links" aria-label="Archive sections">
+                <a href="#top" class="drawer-link" data-drawer-link>
+                    <span class="drawer-num">01</span>
+                    <span class="drawer-label">Overview</span>
+                    <span class="drawer-arrow" aria-hidden="true">→</span>
+                </a>
+                <a href="#projects" class="drawer-link" data-drawer-link>
+                    <span class="drawer-num">02</span>
+                    <span class="drawer-label">Selected Projects</span>
+                    <span class="drawer-arrow" aria-hidden="true">→</span>
+                </a>
+                <a href="#about" class="drawer-link" data-drawer-link>
+                    <span class="drawer-num">03</span>
+                    <span class="drawer-label">Personal Note</span>
+                    <span class="drawer-arrow" aria-hidden="true">→</span>
+                </a>
+                <a href="#writings" class="drawer-link" data-drawer-link>
+                    <span class="drawer-num">04</span>
+                    <span class="drawer-label">Writings &amp; Essays</span>
+                    <span class="drawer-arrow" aria-hidden="true">→</span>
+                </a>
+                <a href="#cv" class="drawer-link" data-drawer-link>
+                    <span class="drawer-num">05</span>
+                    <span class="drawer-label">Curriculum Vitae</span>
+                    <span class="drawer-arrow" aria-hidden="true">→</span>
+                </a>
+                <a href="#contact" class="drawer-link" data-drawer-link>
+                    <span class="drawer-num">06</span>
+                    <span class="drawer-label">Contact</span>
+                    <span class="drawer-arrow" aria-hidden="true">→</span>
+                </a>
+            </nav>
+
+            <div class="nav-drawer-foot">
+                <!-- EDIT: Replace placeholder email address -->
+                <span class="nav-drawer-email">hello@denizkaya.studio</span>
+                <button type="button" class="pill pill--neutral pill--sm" data-copy-email>Copy Email</button>
+            </div>
+        </div>
+    </header>
+
+    <main id="main-content">
+        <!-- 01. Hero Section -->
+        <section id="top" class="hero" aria-labelledby="hero-heading">
+            <div class="hero-watermark" aria-hidden="true">ARCHIVE</div>
+
+            <div class="container hero-grid">
+                <div class="hero-copy">
+                    <div class="hero-meta-row">
+                        <span class="pill pill--tag">ISSUE 01 — PERSONAL ARCHIVE</span>
+                        <span class="counter-badge">EST. 2026</span>
+                    </div>
+
+                    <!-- EDIT: Customize your display headline -->
+                    <h1 id="hero-heading" class="hero-title">
+                        SYSTEMS, STORIES &amp; <em class="serif-accent">curated</em> ARTIFACTS.
+                    </h1>
+
+                    <!-- EDIT: Customize your intro bio -->
+                    <p class="hero-lead">
+                        I am Deniz Kaya, an independent design engineer and writer working at the intersection of
+                        structured software and print-inspired editorial web craft. This space gathers selected builds,
+                        field notes, and my working curriculum vitae.
+                    </p>
+
+                    <div class="hero-actions">
+                        <a href="#projects" class="pill pill--primary">
+                            <span>Explore Projects</span>
+                            <span aria-hidden="true">→</span>
+                        </a>
+                        <a href="#cv" class="pill pill--neutral">Curriculum Vitae</a>
+                    </div>
+
+                    <!-- EDIT: Update location and short role label -->
+                    <p class="hero-caption">Based in Istanbul · Independent Designer &amp; Developer</p>
+                </div>
+
+                <div class="hero-art-col">
+                    <figure class="hero-art-wrap">
+                        <img src="assets/hero-editorial.png"
+                            alt="Contemporary Swiss risograph editorial illustration featuring stacked architectural folios, a green arch, drafting geometry, a ceramic vessel, and a botanical silhouette on stone ground"
+                            width="896" height="1200" loading="eager">
+                        <figcaption class="pill pill--tag hero-plate-tag">00 / PLATE — 2026</figcaption>
+                    </figure>
+                </div>
+            </div>
+        </section>
+
+        <!-- 02. Infinite Editorial Marquee -->
+        <div class="marquee-band" aria-hidden="true">
+            <div class="marquee-track">
+                <div class="marquee-group">
+                    <span class="marquee-item">SELECTED PROJECTS</span>
+                    <span class="marquee-dot"></span>
+                    <span class="marquee-item">ESSAYS &amp; FIELD NOTES</span>
+                    <span class="marquee-dot"></span>
+                    <span class="marquee-item">CURRICULUM VITAE</span>
+                    <span class="marquee-dot"></span>
+                    <span class="marquee-item">WEB ARCHITECTURE</span>
+                    <span class="marquee-dot"></span>
+                    <span class="marquee-item">EDITORIAL SYSTEMS</span>
+                    <span class="marquee-dot"></span>
+                    <span class="marquee-item">INTERACTION DESIGN</span>
+                    <span class="marquee-dot"></span>
+                </div>
+                <div class="marquee-group">
+                    <span class="marquee-item">SELECTED PROJECTS</span>
+                    <span class="marquee-dot"></span>
+                    <span class="marquee-item">ESSAYS &amp; FIELD NOTES</span>
+                    <span class="marquee-dot"></span>
+                    <span class="marquee-item">CURRICULUM VITAE</span>
+                    <span class="marquee-dot"></span>
+                    <span class="marquee-item">WEB ARCHITECTURE</span>
+                    <span class="marquee-dot"></span>
+                    <span class="marquee-item">EDITORIAL SYSTEMS</span>
+                    <span class="marquee-dot"></span>
+                    <span class="marquee-item">INTERACTION DESIGN</span>
+                    <span class="marquee-dot"></span>
+                </div>
+            </div>
+        </div>
+
+        <!-- 03. Selected Projects — Mixed-Height Editorial Gallery -->
+        <section id="projects" class="section projects-section" aria-labelledby="projects-heading">
+            <div class="container">
+                <div class="section-head">
+                    <div class="section-title-group">
+                        <div class="eyebrow-row">
+                            <span class="counter-badge counter-badge--outline">01</span>
+                            <span class="section-eyebrow">SELECTED WORKS</span>
+                        </div>
+                        <h2 id="projects-heading" class="section-title">Projects &amp; Experiments</h2>
+                    </div>
+
+                    <div class="filter-bar" role="group" aria-label="Filter projects by category">
+                        <button type="button" class="pill pill--filter is-active" data-project-filter="all"
+                            aria-pressed="true">All</button>
+                        <button type="button" class="pill pill--filter" data-project-filter="engineering"
+                            aria-pressed="false">Engineering</button>
+                        <button type="button" class="pill pill--filter" data-project-filter="editorial"
+                            aria-pressed="false">Editorial</button>
+                        <button type="button" class="pill pill--filter" data-project-filter="visual"
+                            aria-pressed="false">Visual</button>
+                    </div>
+                </div>
+
+                <div id="project-gallery" class="project-gallery">
+                    <!-- Project 01 -->
+                    <article class="project-card project-card--wide" data-category="engineering">
+                        <button type="button" class="project-frame-btn" data-open-item="project-01"
+                            aria-label="Inspect Meridian Spatial Atlas case study">
+                            <div class="project-frame project-frame--landscape-32">
+                                <img src="assets/project-01.png"
+                                    alt="Swiss risograph geometric cartography illustration with interlocking orbital rings and topographic contours"
+                                    width="1264" height="848" loading="lazy">
+                            </div>
+                        </button>
+                        <div class="project-meta">
+                            <div class="project-meta-top">
+                                <div class="project-meta-left">
+                                    <span class="counter-badge">01</span>
+                                    <span class="pill pill--tag">Engineering</span>
+                                </div>
+                                <span class="project-year">2026</span>
+                            </div>
+                            <h3 class="project-title">Meridian Spatial Atlas</h3>
+                            <p class="project-desc">Interactive elevation archive mapping coastal topography with
+                                deterministic canvas rendering and zero runtime bloat.</p>
+                            <button type="button" class="ghost-link project-cta" data-open-item="project-01">
+                                <span>Inspect case</span>
+                                <span aria-hidden="true">→</span>
+                            </button>
+                        </div>
+                    </article>
+
+                    <!-- Project 02 -->
+                    <article class="project-card project-card--tall" data-category="editorial">
+                        <button type="button" class="project-frame-btn" data-open-item="project-02"
+                            aria-label="Inspect Monograph 04 Type System case study">
+                            <div class="project-frame project-frame--portrait">
+                                <img src="assets/project-02.png"
+                                    alt="Editorial illustration of stepped architectural arches and fanned archival paper folios"
+                                    width="896" height="1200" loading="lazy">
+                            </div>
+                        </button>
+                        <div class="project-meta">
+                            <div class="project-meta-top">
+                                <div class="project-meta-left">
+                                    <span class="counter-badge">02</span>
+                                    <span class="pill pill--tag">Editorial</span>
+                                </div>
+                                <span class="project-year">2025</span>
+                            </div>
+                            <h3 class="project-title">Monograph 04 Type System</h3>
+                            <p class="project-desc">A modular reading engine translating Swiss book grid proportions
+                                cleanly to fluid browser viewports.</p>
+                            <button type="button" class="ghost-link project-cta" data-open-item="project-02">
+                                <span>Inspect case</span>
+                                <span aria-hidden="true">→</span>
+                            </button>
+                        </div>
+                    </article>
+
+                    <!-- Project 03 -->
+                    <article class="project-card project-card--square" data-category="visual">
+                        <button type="button" class="project-frame-btn" data-open-item="project-03"
+                            aria-label="Inspect Forma Tactile Synth case study">
+                            <div class="project-frame project-frame--square">
+                                <img src="assets/project-03.png"
+                                    alt="Overhead graphic editorial illustration of a minimalist tactile acoustic instrument with circular dials and stepped faders"
+                                    width="1024" height="1024" loading="lazy">
+                            </div>
+                        </button>
+                        <div class="project-meta">
+                            <div class="project-meta-top">
+                                <div class="project-meta-left">
+                                    <span class="counter-badge">03</span>
+                                    <span class="pill pill--tag">Visual</span>
+                                </div>
+                                <span class="project-year">2025</span>
+                            </div>
+                            <h3 class="project-title">Forma Tactile Synth</h3>
+                            <p class="project-desc">Browser-based Web Audio synthesizer pairing mechanical hardware cues
+                                with accessible keyboard patching.</p>
+                            <button type="button" class="ghost-link project-cta" data-open-item="project-03">
+                                <span>Inspect case</span>
+                                <span aria-hidden="true">→</span>
+                            </button>
+                        </div>
+                    </article>
+
+                    <!-- Project 04 -->
+                    <article class="project-card project-card--wide-offset" data-category="engineering">
+                        <button type="button" class="project-frame-btn" data-open-item="project-04"
+                            aria-label="Inspect Kinetik Transit Observatory case study">
+                            <div class="project-frame project-frame--landscape-169">
+                                <img src="assets/project-04.png"
+                                    alt="Modernist transit architecture diagram illustration with parallel lines, arched bridges, and circular station nodes"
+                                    width="1376" height="768" loading="lazy">
+                            </div>
+                        </button>
+                        <div class="project-meta">
+                            <div class="project-meta-top">
+                                <div class="project-meta-left">
+                                    <span class="counter-badge">04</span>
+                                    <span class="pill pill--tag">Engineering</span>
+                                </div>
+                                <span class="project-year">2024</span>
+                            </div>
+                            <h3 class="project-title">Kinetik Transit Observatory</h3>
+                            <p class="project-desc">Real-time ferry and metro cadence viewer distilling public timetable
+                                feeds into legible visual schedules.</p>
+                            <button type="button" class="ghost-link project-cta" data-open-item="project-04">
+                                <span>Inspect case</span>
+                                <span aria-hidden="true">→</span>
+                            </button>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- 04. Personal Note / About — Two-Pane Editorial Split -->
+        <section id="about" class="section about-section" aria-labelledby="about-heading">
+            <div class="container">
+                <div class="about-split-wrap">
+                    <div class="about-split">
+                        <div class="about-left">
+                            <div class="about-left-top">
+                                <div class="eyebrow-row">
+                                    <span class="counter-badge counter-badge--lime">02</span>
+                                    <span class="section-eyebrow section-eyebrow--lime">PERSONAL NOTE</span>
+                                </div>
+                                <h2 id="about-heading" class="about-quote">
+                                    &ldquo;Built like a studio notebook, not a brochure.&rdquo;
+                                </h2>
+                            </div>
+
+                            <div class="about-mascot">
+                                <button type="button" class="about-mascot-frame" data-pettable-fox
+                                    aria-label="Minimal fox emblem">
+                                    <img src="assets/mascot-fox.png"
+                                        alt="Minimal Swiss risograph emblem of a seated geometric terracotta fox with cream-white chest and tail accents set against a deep forest green circle and a small lime dot on warm stone paper"
+                                        width="512" height="512" loading="lazy">
+                                </button>
+                            </div>
+
+                            <div class="about-left-bottom">
+                                <a href="#contact" class="circle-arrow-btn" aria-label="Jump to contact section">
+                                    <span aria-hidden="true">→</span>
+                                </a>
+                                <span class="about-arrow-label">Say hello or start a thread</span>
+                            </div>
+                        </div>
+
+                        <div class="about-right">
+                            <span class="about-watermark" aria-hidden="true">02</span>
+                            <!-- EDIT: Replace this three-sentence bio with your own details anytime -->
+                            <div class="about-prose">
+                                <p>
+                                    I study Management Information Systems and build lightweight web software—combining
+                                    structured interface architecture with interactive tools for publishing and personal
+                                    finance. I gravitate toward craft where discipline and pacing matter, from quiet
+                                    typographic systems to reading financial markets with a calm eye. Away from the
+                                    screen, you will usually find me rallying on a tennis court, studying a stubborn
+                                    chess endgame, watching late-night cinema, or tracking down a great seafood dinner
+                                    by the water.
+                                </p>
+                            </div>
+
+                            <dl class="about-stats">
+                                <div class="about-stat-cell">
+                                    <dt>SHIPPED BUILDS</dt>
+                                    <dd>12+</dd>
+                                </div>
+                                <div class="about-stat-cell">
+                                    <dt>PUBLISHED NOTES</dt>
+                                    <dd>18</dd>
+                                </div>
+                                <div class="about-stat-cell">
+                                    <dt>BASE &amp; ZONE</dt>
+                                    <dd>Istanbul · UTC+3</dd>
+                                </div>
+                            </dl>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 05. Writings & Field Notes — Hairline Studio Index -->
+        <section id="writings" class="section writings-section" aria-labelledby="writings-heading">
+            <div class="container">
+                <div class="section-head">
+                    <div class="section-title-group">
+                        <div class="eyebrow-row">
+                            <span class="counter-badge counter-badge--outline">03</span>
+                            <span class="section-eyebrow">WRITINGS &amp; ESSAYS</span>
+                        </div>
+                        <h2 id="writings-heading" class="section-title">Notes on Craft &amp; Systems</h2>
+                    </div>
+
+                    <div class="filter-bar" role="group" aria-label="Filter writings by topic">
+                        <button type="button" class="pill pill--filter is-active" data-writing-filter="all"
+                            aria-pressed="true">All</button>
+                        <button type="button" class="pill pill--filter" data-writing-filter="essay"
+                            aria-pressed="false">Essay</button>
+                        <button type="button" class="pill pill--filter" data-writing-filter="engineering"
+                            aria-pressed="false">Engineering</button>
+                        <button type="button" class="pill pill--filter" data-writing-filter="design"
+                            aria-pressed="false">Design</button>
+                    </div>
+                </div>
+
+                <div id="writing-list" class="writing-list">
+                    <button type="button" class="index-row" data-category="design" data-open-item="writing-01">
+                        <span class="index-num">01</span>
+                        <span class="index-title">Against Soft Shadows: Why Crisp Geometry Ages Better</span>
+                        <span class="index-meta">
+                            <span class="pill pill--tag">Design</span>
+                            <span class="index-time">6 min</span>
+                            <span class="index-date">Oct 2026</span>
+                        </span>
+                        <span class="index-read">Read <span aria-hidden="true">→</span></span>
+                    </button>
+
+                    <button type="button" class="index-row" data-category="essay" data-open-item="writing-02">
+                        <span class="index-num">02</span>
+                        <span class="index-title">Small Static Sites as Permanent Digital Gardens</span>
+                        <span class="index-meta">
+                            <span class="pill pill--tag">Essay</span>
+                            <span class="index-time">5 min</span>
+                            <span class="index-date">Aug 2026</span>
+                        </span>
+                        <span class="index-read">Read <span aria-hidden="true">→</span></span>
+                    </button>
+
+                    <button type="button" class="index-row" data-category="engineering" data-open-item="writing-03">
+                        <span class="index-num">03</span>
+                        <span class="index-title">Designing State Machines with Zero Framework Overhead</span>
+                        <span class="index-meta">
+                            <span class="pill pill--tag">Engineering</span>
+                            <span class="index-time">8 min</span>
+                            <span class="index-date">Jun 2026</span>
+                        </span>
+                        <span class="index-read">Read <span aria-hidden="true">→</span></span>
+                    </button>
+
+                    <button type="button" class="index-row" data-category="design" data-open-item="writing-04">
+                        <span class="index-num">04</span>
+                        <span class="index-title">Editorial Pacing: Borrowing Rhythm from Print Monographs</span>
+                        <span class="index-meta">
+                            <span class="pill pill--tag">Design</span>
+                            <span class="index-time">7 min</span>
+                            <span class="index-date">Mar 2026</span>
+                        </span>
+                        <span class="index-read">Read <span aria-hidden="true">→</span></span>
+                    </button>
+
+                    <button type="button" class="index-row" data-category="essay" data-open-item="writing-05">
+                        <span class="index-num">05</span>
+                        <span class="index-title">Notes from Rebuilding My Reading Workflow</span>
+                        <span class="index-meta">
+                            <span class="pill pill--tag">Essay</span>
+                            <span class="index-time">4 min</span>
+                            <span class="index-date">Jan 2026</span>
+                        </span>
+                        <span class="index-read">Read <span aria-hidden="true">→</span></span>
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- 06. Curriculum Vitae & Core Instruments -->
+        <section id="cv" class="section cv-section" aria-labelledby="cv-heading">
+            <div class="container">
+                <div class="cv-grid">
+                    <div class="cv-aside">
+                        <div class="cv-aside-sticky">
+                            <div class="eyebrow-row">
+                                <span class="counter-badge counter-badge--outline">04</span>
+                                <span class="section-eyebrow">CURRICULUM VITAE</span>
+                            </div>
+                            <h2 id="cv-heading" class="section-title">Experience &amp; Education</h2>
+                            <p class="cv-summary">
+                                A concise chronology of studio roles, independent product engineering, and academic
+                                foundations.
+                            </p>
+                            <button type="button" id="print-cv" class="pill pill--neutral">
+                                <span>Print / Save CV</span>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="cv-ledger">
+                        <div class="cv-group">
+                            <h3 class="cv-group-label">EXPERIENCE</h3>
+
+                            <!-- EDIT: Replace with your own roles and achievements -->
+                            <article class="cv-row">
+                                <div class="cv-row-head">
+                                    <div>
+                                        <h4 class="cv-role">Independent Design Engineer</h4>
+                                        <p class="cv-org">Studio Practice</p>
+                                    </div>
+                                    <span class="cv-years">2024 — Present</span>
+                                </div>
+                                <p class="cv-outcome">Designing bespoke editorial websites, interactive data tools, and
+                                    lightweight frontend systems for studios and independent writers.</p>
+                            </article>
+
+                            <article class="cv-row">
+                                <div class="cv-row-head">
+                                    <div>
+                                        <h4 class="cv-role">Frontend Developer</h4>
+                                        <p class="cv-org">Studio Forma</p>
+                                    </div>
+                                    <span class="cv-years">2023 — 2024</span>
+                                </div>
+                                <p class="cv-outcome">Built accessible component libraries, editorial publication
+                                    layouts, and custom SVG visualizers with strict performance budgets.</p>
+                            </article>
+
+                            <article class="cv-row">
+                                <div class="cv-row-head">
+                                    <div>
+                                        <h4 class="cv-role">Web Systems Intern</h4>
+                                        <p class="cv-org">Northstar Labs</p>
+                                    </div>
+                                    <span class="cv-years">2022 — 2023</span>
+                                </div>
+                                <p class="cv-outcome">Assisted in prototyping internal data dashboards, refactoring
+                                    semantic CSS systems, and automating build asset pipelines.</p>
+                            </article>
+                        </div>
+
+                        <div class="cv-group">
+                            <h3 class="cv-group-label">EDUCATION &amp; RECOGNITION</h3>
+
+                            <!-- EDIT: Replace with your degree, certifications, or honors -->
+                            <article class="cv-row">
+                                <div class="cv-row-head">
+                                    <div>
+                                        <h4 class="cv-role">B.S. Management Information Systems</h4>
+                                        <p class="cv-org">Marmara University</p>
+                                    </div>
+                                    <span class="cv-years">2021 — 2025</span>
+                                </div>
+                                <p class="cv-outcome">Coursework centered on human-computer interaction, information
+                                    architecture, database design, and web engineering.</p>
+                            </article>
+
+                            <article class="cv-row">
+                                <div class="cv-row-head">
+                                    <div>
+                                        <h4 class="cv-role">Annual Digital Craft Showcase — Shortlist</h4>
+                                        <p class="cv-org">Istanbul Design Week</p>
+                                    </div>
+                                    <span class="cv-years">2025</span>
+                                </div>
+                                <p class="cv-outcome">Recognized for typographic clarity, accessibility discipline, and
+                                    zero-dependency interaction design.</p>
+                            </article>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Core Stack & Instruments Single-Row Marks Strip -->
+                <div class="stack-strip" aria-label="Core stack and instruments">
+                    <p class="stack-caption">CORE STACK &amp; INSTRUMENTS — DAILY PRACTICE</p>
+                    <ul class="stack-row">
+                        <li class="stack-item">
+                            <svg class="stack-icon" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                                stroke="currentColor" stroke-width="1.75" stroke-linecap="square"
+                                stroke-linejoin="miter" aria-hidden="true">
+                                <polyline points="8 7 3 12 8 17"></polyline>
+                                <polyline points="16 7 21 12 16 17"></polyline>
+                                <line x1="14" y1="5" x2="10" y2="19"></line>
+                            </svg>
+                            <span>HTML &amp; CSS</span>
+                        </li>
+                        <li class="stack-item">
+                            <svg class="stack-icon" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                                stroke="currentColor" stroke-width="1.75" stroke-linecap="square"
+                                stroke-linejoin="miter" aria-hidden="true">
+                                <rect x="4" y="4" width="16" height="16"></rect>
+                                <circle cx="9.5" cy="9.5" r="1.5"></circle>
+                                <polyline points="14.5 9.5 14.5 15.5 11.5 15.5"></polyline>
+                            </svg>
+                            <span>JavaScript</span>
+                        </li>
+                        <li class="stack-item">
+                            <svg class="stack-icon" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                                stroke="currentColor" stroke-width="1.75" stroke-linecap="square"
+                                stroke-linejoin="miter" aria-hidden="true">
+                                <rect x="3" y="3" width="8" height="8"></rect>
+                                <rect x="13" y="3" width="8" height="8"></rect>
+                                <rect x="3" y="13" width="8" height="8"></rect>
+                                <rect x="13" y="13" width="8" height="8"></rect>
+                            </svg>
+                            <span>Interface Systems</span>
+                        </li>
+                        <li class="stack-item">
+                            <svg class="stack-icon" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                                stroke="currentColor" stroke-width="1.75" stroke-linecap="square"
+                                stroke-linejoin="miter" aria-hidden="true">
+                                <rect x="4" y="3" width="16" height="18"></rect>
+                                <line x1="9" y1="3" x2="9" y2="21"></line>
+                                <line x1="12" y1="8" x2="17" y2="8"></line>
+                                <line x1="12" y1="12" x2="17" y2="12"></line>
+                            </svg>
+                            <span>Editorial Layout</span>
+                        </li>
+                        <li class="stack-item">
+                            <svg class="stack-icon" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                                stroke="currentColor" stroke-width="1.75" stroke-linecap="square"
+                                stroke-linejoin="miter" aria-hidden="true">
+                                <circle cx="6" cy="18" r="2.5"></circle>
+                                <circle cx="12" cy="6" r="2.5"></circle>
+                                <circle cx="18" cy="18" r="2.5"></circle>
+                                <line x1="7.5" y1="15.8" x2="10.8" y2="8.2"></line>
+                                <line x1="13.2" y1="8.2" x2="16.5" y2="15.8"></line>
+                                <line x1="8.5" y1="18" x2="15.5" y2="18"></line>
+                            </svg>
+                            <span>Data Modeling</span>
+                        </li>
+                        <li class="stack-item">
+                            <svg class="stack-icon" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                                stroke="currentColor" stroke-width="1.75" stroke-linecap="square"
+                                stroke-linejoin="miter" aria-hidden="true">
+                                <line x1="4" y1="5" x2="20" y2="5"></line>
+                                <line x1="12" y1="5" x2="12" y2="19"></line>
+                                <line x1="8" y1="19" x2="16" y2="19"></line>
+                                <line x1="4" y1="5" x2="4" y2="8"></line>
+                                <line x1="20" y1="5" x2="20" y2="8"></line>
+                            </svg>
+                            <span>Typography</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- 07. Deep Forest Contact Grid & Architectural Footer -->
+    <footer id="contact" class="site-footer" aria-labelledby="contact-heading">
+        <div class="container">
+            <div class="contact-header">
+                <div class="eyebrow-row">
+                    <span class="counter-badge counter-badge--lime">05</span>
+                    <span class="section-eyebrow section-eyebrow--lime">GET IN TOUCH</span>
+                </div>
+                <h2 id="contact-heading" class="footer-heading">Start a Conversation</h2>
+                <p class="footer-lead">
+                    Whether you want to collaborate on a web project, exchange essays, or discuss a full-time role, my
+                    inbox is always open.
+                </p>
+            </div>
+
+            <!-- 3-Cell Contact Grid -->
+            <div class="contact-grid">
+                <div class="contact-cell">
+                    <span class="contact-cell-label">DIRECT EMAIL</span>
+                    <!-- EDIT: Replace with your real email address -->
+                    <a class="contact-cell-value" href="mailto:hello@denizkaya.studio">hello@denizkaya.studio</a>
+                    <div class="contact-cell-action">
+                        <button type="button" id="copy-email-btn" class="pill pill--neutral pill--sm"
+                            data-copy-email>Copy Email</button>
+                    </div>
+                </div>
+
+                <div class="contact-cell">
+                    <span class="contact-cell-label">ELSEWHERE</span>
+                    <!-- EDIT: Replace with your social and profile URLs -->
+                    <ul class="contact-links-list">
+                        <li><a href="https://github.com/denizkaya" target="_blank" rel="noopener noreferrer">GitHub <span
+                                    aria-hidden="true">↗</span></a></li>
+                        <li><a href="https://linkedin.com/in/denizkaya" target="_blank" rel="noopener noreferrer">LinkedIn <span
+                                    aria-hidden="true">↗</span></a></li>
+                        <li><a href="https://instagram.com/denizkaya" target="_blank" rel="noopener noreferrer">Instagram <span
+                                    aria-hidden="true">↗</span></a></li>
+                        <li><a href="https://read.cv/denizkaya" target="_blank" rel="noopener noreferrer">Read.cv <span
+                                    aria-hidden="true">↗</span></a></li>
+                    </ul>
+                </div>
+
+                <div class="contact-cell">
+                    <span class="contact-cell-label">LOCATION &amp; STATUS</span>
+                    <p class="contact-cell-value">Istanbul, TR (UTC+3)</p>
+                    <p class="contact-status-line">
+                        <span class="status-pip status-pip--lime" aria-hidden="true"></span>
+                        <span>Open for select projects &amp; roles</span>
+                    </p>
+                </div>
+            </div>
+
+            <!-- Compact Message Form -->
+            <form id="contact-form" class="contact-form" novalidate>
+                <div class="form-row-2">
+                    <div class="form-field">
+                        <label for="contact-name">YOUR NAME</label>
+                        <input type="text" id="contact-name" name="name" placeholder="Ada Lovelace" autocomplete="name"
+                            required>
+                        <span class="field-error" id="error-name" aria-live="polite"></span>
+                    </div>
+                    <div class="form-field">
+                        <label for="contact-email">EMAIL ADDRESS</label>
+                        <input type="email" id="contact-email" name="email" placeholder="ada@example.com"
+                            autocomplete="email" required>
+                        <span class="field-error" id="error-email" aria-live="polite"></span>
+                    </div>
+                </div>
+
+                <div class="form-field">
+                    <label for="contact-message">MESSAGE</label>
+                    <textarea id="contact-message" name="message" rows="4"
+                        placeholder="Tell me about your project, reading note, or idea..." required></textarea>
+                    <span class="field-error" id="error-message" aria-live="polite"></span>
+                </div>
+
+                <div class="form-actions">
+                    <button type="submit" class="pill pill--primary">
+                        <span>Send Message</span>
+                        <span aria-hidden="true">→</span>
+                    </button>
+                    <div id="form-status" class="form-status" role="status" aria-live="polite"></div>
+                </div>
+            </form>
+
+            <!-- Architectural Footer Columns & Oversized Wordmark -->
+            <div class="footer-links-bar">
+                <div class="footer-col">
+                    <h3 class="footer-col-title">NAVIGATE</h3>
+                    <ul>
+                        <li><a href="#top">Overview</a></li>
+                        <li><a href="#projects">Projects</a></li>
+                        <li><a href="#about">Personal Note</a></li>
+                        <li><a href="#writings">Writings</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3 class="footer-col-title">ARCHIVE</h3>
+                    <ul>
+                        <li><a href="#cv">Curriculum Vitae</a></li>
+                        <li><a href="#projects" data-open-item="project-01">Meridian Spatial Atlas</a></li>
+                        <li><a href="#writings" data-open-item="writing-01">Against Soft Shadows</a></li>
+                        <li><a href="#writings" data-open-item="writing-02">Small Static Sites</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3 class="footer-col-title">CONNECT</h3>
+                    <ul>
+                        <li><a href="mailto:hello@denizkaya.studio">Email</a></li>
+                        <li><a href="https://github.com/denizkaya" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+                        <li><a href="https://linkedin.com/in/denizkaya" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
+                        <li><a href="https://instagram.com/denizkaya" target="_blank" rel="noopener noreferrer">Instagram</a></li>
+                        <li><a href="https://read.cv/denizkaya" target="_blank" rel="noopener noreferrer">Read.cv</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- EDIT: Replace wordmark with your name -->
+            <div class="footer-wordmark" aria-hidden="true">DENIZ KAYA</div>
+
+            <div class="footer-bottom">
+                <div class="footer-colophon">
+                    <button type="button" class="footer-fox-stamp" data-pettable-fox
+                        aria-label="Pet the fox colophon stamp" title="Hover to pet">
+                        <img src="assets/mascot-fox.png"
+                            alt="Small circular geometric fox emblem stamp" width="512" height="512" loading="lazy">
+                    </button>
+                    <p>© 2026 DENIZ KAYA — PERSONAL ARCHIVE</p>
+                </div>
+                <p>SET IN HOST GROTESK &amp; EB GARAMOND</p>
+                <a href="#top" class="pill pill--forest-outline">
+                    <span>Back to top</span>
+                    <span aria-hidden="true">↑</span>
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Editorial Reader Modal (Projects & Writings) -->
+    <dialog id="reader-modal" class="reader-modal" aria-labelledby="reader-title">
+        <div class="reader-shell">
+            <div class="reader-topbar">
+                <div id="reader-meta" class="reader-meta"></div>
+                <button type="button" id="reader-close" class="pill pill--neutral pill--sm"
+                    aria-label="Close reader modal">
+                    <span>Close</span>
+                    <span aria-hidden="true">✕</span>
+                </button>
+            </div>
+            <div id="reader-content" class="reader-content">
+                <h2 id="reader-title" class="reader-title">Archive Item</h2>
+            </div>
+        </div>
+    </dialog>
+
+    <!-- Fixed Minimal Fox Companion (runs left to right from Projects through Personal Note; hover to pet) -->
+    <div id="fox-runner-rail" class="fox-runner-rail is-hidden">
+        <button type="button" id="fox-runner" class="fox-runner" data-pettable-fox
+            aria-label="Minimal fox companion">
+            <svg class="fox-svg" width="78" height="52" viewBox="0 0 96 64" fill="none" aria-hidden="true">
+                <!-- Swept Layered Geometric Tail -->
+                <g class="fox-tail">
+                    <path d="M27 36 C15 37 5 30 3 16 C12 17 21 21 30 29 Z" fill="#9A431D" />
+                    <path d="M27 36 C17 36.5 9 32 5.5 23 C13 24 20 27 28 32 Z" fill="#7D3314" />
+                    <path d="M3 16 C7.5 16.6 12.5 18.2 16.5 21.4 L12.5 23.6 L14.4 26.8 C9.2 25.4 4.8 21.6 3 16 Z"
+                        fill="#F6F5F0" />
+                    <path d="M10 21 C15 22.8 20.5 25.8 26 30" stroke="#141414" stroke-width="0.9"
+                        stroke-opacity="0.35" />
+                </g>
+
+                <!-- Far-Side Legs with Dark Fox Socks -->
+                <g class="fox-leg fox-leg--back-far">
+                    <polygon points="29,37 36,37 33,51 28,51" fill="#742F13" />
+                    <polygon points="28,51 33,51 31,60 27,60" fill="#141414" />
+                </g>
+                <g class="fox-leg fox-leg--front-far">
+                    <polygon points="57,37 63,37 66,51 61,51" fill="#742F13" />
+                    <polygon points="61,51 66,51 68,60 64,60" fill="#141414" />
+                </g>
+
+                <!-- Main Sculpted Body -->
+                <g class="fox-body-group">
+                    <!-- Torso & Haunch Facets -->
+                    <polygon points="25,30 63,28 68,39 30,42" fill="#9A431D" />
+                    <polygon points="25,30 43,29 39,41 30,42" fill="#873818" />
+                    <!-- Underbelly Highlight -->
+                    <polygon points="34,40 59,38 56,42 35,43" fill="#F6F5F0" />
+                    <!-- Chest Ruff & Neck -->
+                    <polygon points="54,28 67,25 70,38 58,40" fill="#F6F5F0" />
+                    <polygon points="58,28 65,26 64,34" fill="#9A431D" />
+                    <!-- Subtle Collar & Lime Pip Accent -->
+                    <line x1="60" y1="26.5" x2="68.5" y2="31.5" stroke="#1B3A2E" stroke-width="2.2" />
+                    <circle cx="65.5" cy="30" r="2.2" fill="#E2FF70" stroke="#141414" stroke-width="0.8" />
+
+                    <!-- Near-Side Legs with Dark Fox Socks -->
+                    <g class="fox-leg fox-leg--back-near">
+                        <polygon points="32,37 40,36 37,50 31,50" fill="#9A431D" />
+                        <polygon points="31,50 37,50 35,60 30,60" fill="#141414" />
+                        <rect x="30" y="58.5" width="6" height="2.4" fill="#141414" />
+                    </g>
+                    <g class="fox-leg fox-leg--front-near">
+                        <polygon points="60,36 67,35 70,50 64,50" fill="#9A431D" />
+                        <polygon points="64,50 70,50 72,60 67,60" fill="#141414" />
+                        <rect x="67" y="58.5" width="6.2" height="2.4" fill="#141414" />
+                    </g>
+
+                    <!-- Detailed Angular Fox Head -->
+                    <g class="fox-head">
+                        <!-- Far Ear -->
+                        <polygon points="69,16 74,4 80,15" fill="#742F13" />
+                        <polygon points="72.4,7.8 74,4 76.6,9" fill="#141414" />
+                        <!-- Head Crown & Snout -->
+                        <polygon points="62,21 75,14 91,23 81,31 65,30" fill="#9A431D" />
+                        <polygon points="71,15.5 79,16.5 91,23 80,24" fill="#A94B22" />
+                        <!-- Cream Cheek Ruff & Jaw -->
+                        <polygon points="67,27 77,24.5 91,23 81,31 68,31.5" fill="#F6F5F0" />
+                        <polygon points="67,27 71,32.5 76,30.5" fill="#F6F5F0" />
+                        <!-- Near Ear with Inner Cavity & Carbon Tip -->
+                        <polygon points="63,20 66,5 75,16" fill="#9A431D" />
+                        <polygon points="65.2,17.5 66.8,9.5 71.8,15.8" fill="#1B3A2E" />
+                        <polygon points="64.9,10.2 66,5 69.2,9.2" fill="#141414" />
+                        <!-- Nose Tip -->
+                        <polygon points="88.5,21.6 92.2,23 89.2,25" fill="#141414" />
+                        <!-- Fine Whisker Hairlines -->
+                        <line x1="82.5" y1="26.5" x2="90.5" y2="27.2" stroke="#141414" stroke-width="0.9"
+                            stroke-linecap="round" />
+                        <line x1="81.8" y1="28.3" x2="89.2" y2="30" stroke="#141414" stroke-width="0.9"
+                            stroke-linecap="round" />
+                        <!-- Rest Eye (almond with subtle glint) -->
+                        <g class="fox-eye-normal">
+                            <ellipse cx="77.2" cy="21.4" rx="2.1" ry="1.6" fill="#141414" />
+                            <circle cx="77.8" cy="20.9" r="0.55" fill="#FAF9F5" />
+                        </g>
+                        <!-- Happy Curved Eye on Hover/Pet -->
+                        <path class="fox-eye-happy" d="M74.8 22.1 Q77.3 18.8 79.8 22.1" stroke="#141414"
+                            stroke-width="1.8" stroke-linecap="round" fill="none" />
+                    </g>
+                </g>
+            </svg>
+        </button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
